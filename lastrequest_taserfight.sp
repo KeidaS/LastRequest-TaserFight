@@ -85,7 +85,6 @@ public Action:Event_WeaponFire(Handle:event, const String:name[], bool:dontBroad
 		if (StrEqual(weapon, "weapon_taser")) {
 			CreateTimer(1.5, GiveTaser, GetClientUserId(client), TIMER_FLAG_NO_MAPCHANGE);
 			CreateTimer(3.0, RemoveTaser, EntIndexToEntRef(weaponEnt), TIMER_FLAG_NO_MAPCHANGE);
-			GivePlayerItem(client, "weapon_taser");
 		}
 	}
 }
